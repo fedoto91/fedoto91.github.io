@@ -42,12 +42,13 @@ function createMarker(vol, point, description) {
             //}
             var infoWinText = "";
             //---------------name portion----------------
-            var name = description.getElementsByTagName("name");
+            var name = description.getElementsByTagName("NAME");
+
             //var name = description.getElementsByTagName("name")[0].firstChild.nodeValue;
             //var name = description.getElementsByTagName("name")[0].childNodes[0].nodeValue;
             infoWinText = '<table style="width=300px; height=120px; text-align=left;">' + '<tr><td colspan=2 style="font-family=arial; font-weight=bold; color=maroon;">' + name[0].innerHTML + '</td></tr>';
             //---------------job portion------------------
-            var jobList = description.getElementsByTagName("job");
+            var jobList = description.getElementsByTagName("JOB");
             //var name = description.getElementsByTagName("name")[0].childNodes[0].nodeValue;
             infoWinText += '<tr style="vertical-align=top;">' + '<td style="font-family=arial;">' + '<div style="font-size=10pt;"><job>';
             for (var i = 0; i < jobList.length; i++) {
@@ -57,7 +58,9 @@ function createMarker(vol, point, description) {
             }
             infoWinText += '</div></td>';
             //---------------img portion------------------
-            var persImage = description.getElementsByTagName("img");
+
+            var persImage = description.getElementsByTagName("IMG");
+
             //var name = description.getElementsByTagName("name")[0].childNodes[0].nodeValue;
             infoWinText += '<td><div><img src=' + persImage[0].innerHTML + ' style="width=100; height=100;"></div></td></tr></table>';
             infoWindow.setContent(infoWinText);
