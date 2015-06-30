@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<volunteers>
+  <volt genre="girl">
+    <location lat="41.229691" long="-84.414198" />
+    <description>
+	<name>NHEG</name>
+	<img>burger.png</img>
+        <job>Graphic Designer/Artist</job>
+        <job>Student Leadership Council member</job>
+    </description>
+  </volt>
+  <volt genre="girl">
+    <location lat="34.050026" long="-118.239067" />
+    <description>
+	<name>Elasta Girl</name>
+	<img>flower_girl.jpg</img>
+        <job>Student Leadership Council member</job>
+    </description>
+  </volt>
+  <volt genre="boy">
+    <location lat="43.601944" long="5.495556" />
+    <description>
+	<name>Maverick</name>
+	<img>guitar_boy.jpg</img>
+        <job>Graphic Designer/Artist</job>
+        <job>Student Leadership Council member</job>
+    </description>
+  </volt>
+  <volt genre="boy">
+    <location lat="18.220833" long="-66.590149" />
+    <description>
+	<name>BurgerMeisterMeisterBurger</name>
+	<img>guitar_boy.jpg</img>
+        <job>Student Leadership Council member</job>
+    </description>
+  </volt>
+</volunteers>
