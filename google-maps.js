@@ -31,7 +31,6 @@ function createMarker(vol, point, description) {
             position: point,
             icon: markerImg,
         });
-        console.log(marker);
         //Assembles & applies style formatting to each marker
         google.maps.event.addListener(marker, 'click', function() {
             //Check to see if the infoWindow already exists and is not null
