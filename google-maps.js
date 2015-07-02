@@ -46,7 +46,7 @@ function createMarker(vol, point, description) {
 
             //var name = description.getElementsByTagName("name")[0].firstChild.nodeValue;
             //var name = description.getElementsByTagName("name")[0].childNodes[0].nodeValue;
-            infoWinText = '<table style="width=300px; height=120px; text-align=left;">' + '<tr><td colspan=2 style="font-family=arial; font-weight=bold; color=maroon;">' + name[0].innerHTML + '</td></tr>';
+            infoWinText = '<table style="width=300px; height=120px; text-align=left;">' + '<tr><td colspan=2 style="font-family=arial; font-weight=bold; color=maroon;">' + name[0].childNodes[0].nodeValue + '</td></tr>';
             //---------------job portion------------------
             var jobList = description.getElementsByTagName("JOB");
             //var name = description.getElementsByTagName("name")[0].childNodes[0].nodeValue;
@@ -54,7 +54,7 @@ function createMarker(vol, point, description) {
             for (var i = 0; i < jobList.length; i++) {
                 //infoWinText += ' - ' + jobList[i].nodeValue + '<br>';
                 //infoWinText += ' - ' + jobList[i].childNodes[0].nodeValue + '<br>';
-                infoWinText += ' - ' + jobList[i].innerHTML + '<br>';
+                infoWinText += ' - ' + jobList[i].childNodes[0].nodeValue + '<br>';
             }
             infoWinText += '</div></td>';
             //---------------img portion------------------
@@ -62,7 +62,7 @@ function createMarker(vol, point, description) {
             var persImage = description.getElementsByTagName("IMG");
 
             //var name = description.getElementsByTagName("name")[0].childNodes[0].nodeValue;
-            infoWinText += '<td><div><img src=' + persImage[0].innerHTML + ' style="width=100; height=100;"></div></td></tr></table>';
+            infoWinText += '<td><div><img src=' + persImage[0].childNodes[0].nodeValue + ' style="width=100; height=100;"></div></td></tr></table>';
             infoWindow.setContent(infoWinText);
             //alert(infoWindow.getContent());
             infoWindow.open(map, marker);
