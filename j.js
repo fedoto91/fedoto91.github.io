@@ -1,14 +1,10 @@
 var map;
 
 function createMarker(vol, point, description) {
-    var imageChoiceArr = {
-            "girl": "tree.png",
-            "boy": "burger.png"
+        var imageChoiceArr = {
+            "girl": "girl.png",
+            "boy": "tree.png"
         };
-        /*var imageChoiceArr = {
-            "girl": "final_girl_marker.png",
-            "boy": "final_boy_marker.png"
-        };*/
         //imageChoiceArr["shadow"] = "";
         //imageChoiceArr["girl"] = "final_girl_marker.png";
         //imageChoiceArr["boy"] = "final_boy_marker.png";
@@ -50,10 +46,21 @@ function createMarker(vol, point, description) {
             var name = description.getElementsByTagName("NAME");
             console.log(name);
             //infoWinText = '<table style="width=300px; height=120px; text-align=left;">' + '<tr><td colspan=2 style="font-family=arial; font-weight=bold; color=maroon;">' + name[0].innerHTML + '</td></tr>';
-             infoWinText = '<table style="width=300px; height=120px; text-align=left;">' + '<tr><td colspan=2 style="font-family=arial; font-weight=bold; color=maroon;">' + name[0].childNodes[0].nodeValue + '</td></tr>';
+            infoWinText = '<table style="width=300px; height=120px; text-align=left;">' + '<tr><td colspan=2 style="font-family=arial; font-weight=bold; color=maroon;">' + name[0].childNodes[0].nodeValue + '</td></tr>';
 
+            //---------------job portion------------------
+            var jobList = description.getElementsByTagName("JOB");
+            infoWinText += '<tr style="vertical-align=top;">' + '<td style="font-family=arial;">' + '<div style="font-size=10pt;"><job>';
+            for (var i = 0; i < jobList.length; i++) {
+                //infoWinText += ' - ' + jobList[i].nodeValue + '<br>';
+                //infoWinText += ' - ' + jobList[i].childNodes[0].nodeValue + '<br>';
+                //infoWinText += ' - ' + jobList[i].innerHTML + '<br>';
                 infoWinText += ' - ' + jobList[i].childNodes[0].nodeValue + '<br>';
-
+            }
+            infoWinText += '</div></td>';
+            //---------------img portion------------------
+            var persImage = description.getElementsByTagName("IMG");
+            //infoWinText += '<td><div><img src=' + persImage[0].innerHTML + ' style="width=100; height=100;"></div></td></tr></table>';
             infoWinText += '<td><div><img src=' + persImage[0].childNodes[0].nodeValue + ' style="width=100; height=100;"></div></td></tr></table>';
             infoWindow.setContent(infoWinText);
             //alert(infoWindow.getContent());
